@@ -28,7 +28,60 @@
   </head>
   <body>
     {% include "Navbar.html" %}
-        {% include "Banner.html" %}
+    <div class="container my-5 py-4">
+      <div class="row gy-4">
+        <div class="col-12 col-lg-6 d-flex justify-content-end">
+          <img
+            src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=1000"
+            width="100%"
+            height="100%"
+            class="rounded about-us-img"
+            alt="company-logo"
+          />
+        </div>
+        <div class="col-12 col-lg-6 d-flex justify-content-start">
+          <div class="container">
+            <h1 class="fw-semibold text-center mb-4">Contact Us</h1>
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                />
+                <label for="name">Full Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="yourname@gmail.com"
+                />
+                <label for="email">Email Address</label>
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Message"
+                  style="height: 120px"
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+              <div class="mb-3 text-center">
+                <button class="btn btn-dark">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {% include "Footer.html" %}
 
     <script

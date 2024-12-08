@@ -28,7 +28,26 @@
   </head>
   <body>
     {% include "Navbar.html" %}
-        {% include "Banner.html" %}
+    <div class="py-4">
+      <h1 class="text-center fw-semibold py-2">Job Openings</h1>
+      <hr />
+    </div>
+
+    <div class="container pb-5 mb-3">
+      {% for job in jobs %}
+      <div class="row gy-3 border-1 d-flex border-secondary-subtle py-3 border-bottom">
+        <div class="col-lg-8 ps-5">
+          <h4 class="text-secondary">{{ job.title }}</h4>
+          <h6><span class="fw-semibold pe-2">Location:</span>{{ job.location }}</h6>
+          <h6><span class="fw-semibold pe-2">Salary:</span>{{ job.currency }}. {{ job.salary }}</h6>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+          <button class="btn btn-outline-primary rounded-1">Apply</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
     {% include "Footer.html" %}
 
     <script
